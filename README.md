@@ -1,10 +1,3 @@
-# Surface
-
-HTML landing page template.
-
-* [Getting started](#getting-started)
-* [Deploy with Netlify](#deploy-with-netlify)
-
 ## Getting started
 * First, ensure that node.js & npm are both installed. If not, choose your OS and installation method from [this page](https://nodejs.org/en/download/package-manager/) and follow the instructions.
 * Next, use your command line to enter your project directory.
@@ -22,6 +15,3 @@ npm run serve
 ```
 npm run build
 ```
-
-## Deploy with Netlify
-Premium HTML templates come with a ready-made `netlify.toml` file to allow you deploying with Netlify and go live in a few clicks. You just need to create a repository and copy the whole content of the `HTML`folder. Then, create a new site from Git in Netlify and deploy the app.

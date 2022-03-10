@@ -1,8 +1,8 @@
 {
-    "name": "surface",
+    "name": "shaynefawcett.com",
     "version": "1.0.0",
-    "description": "Surface Template",
-    "author": "Pasquale Vitiello <pasqualevitiello@gmail.com>",
+    "description": "Shayne Fawcett Portfolio",
+    "author": "Shayne Fawcett <shayne@mindfulwebpartnership.com>",
     "license": "GPLv3",
     "scripts": {
         "clean": "rimraf public/{css/*,js/*,images/*}",
@@ -11,20 +11,16 @@
         "autoprefixer": "postcss -u autoprefixer -r public/css/*",
         "lint": "eslint src/js || true",
         "uglify": "mkdirp public/js -p && uglifyjs src/js/*.js -m -c -o public/js/main.min.js",
-        "imagemin": "rsync -azP --delete src/images/ public/images/; imagemin src/images/* --out-dir public/images",
         "minify-html": "html-minifier --collapse-whitespace --minify-css --minify-js --remove-comments --file-ext html --input-dir src/ --output-dir public/",
         "sync": "browser-sync start --server --files \"public/css/*.css, public/js/*.js, public/**/*.html, !node_modules/**/*.html\" --serveStatic \"public\" --no-notify",
         "serve:html": "onchange \"src/**/*.html\" -- run-s build:html",
         "serve:css": "onchange \"src/scss\" -- run-s build:css",
         "serve:js": "onchange \"src/js\" -- run-s build:js",
         "serve:images": "onchange \"src/images\" -- run-s build:images",
-        "serve:fonts": "onchange \"src/fonts\" -- run-s build:fonts",
         "serve": "run-p sync serve:*",
         "build:html": "run-s minify-html",
         "build:css": "run-s lint-scss scss autoprefixer",
         "build:js": "run-s lint uglify",
-        "build:images": "run-s imagemin",
-        "build:fonts": "rsync -azP --delete src/fonts/ public/fonts/",
         "build": "run-s build:*"
     },
     "devDependencies": {
@@ -47,5 +43,5 @@
         "stylelint": "^9.4.0",
         "uglify-es": "^3.3.10"
     },
-    "homepage": "https://cruip.com/surface"
+    "homepage": "https://shaynefawcett.com"
 }
