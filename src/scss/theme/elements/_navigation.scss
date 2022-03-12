@@ -1,0 +1,35 @@
+  /* back to top button and progress bar */
+  .back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    border-radius: 100%;
+    background: linear-gradient(0deg, #0A2FFE 1px, #3D5AFE 2px, #7085FE 100%);
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    opacity: 100%;
+    transition: opacity 0.5s;
+  }
+  
+  .back-to-top:hover {
+    opacity: 60%;
+  }
+  
+  .hidden {
+    opacity: 0%;
+  }
+  
+  .back-to-top-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
+  }
+  
+  .progress-bar {
+    height: 1rem;
+    background: linear-gradient(0deg, #0A2FFE 1px, #3D5AFE 2px, #7085FE 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }

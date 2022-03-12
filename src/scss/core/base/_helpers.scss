@@ -502,6 +502,10 @@ img.has-shadow {
 	padding-top: 64px;
 }
 
+.flex {
+	display: flex;
+}
+
 @include media( '<=medium' ) {
 
 	.ta-l-mobile {

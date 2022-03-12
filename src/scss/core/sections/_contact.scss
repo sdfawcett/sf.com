@@ -21,7 +21,7 @@
     content: '';
     height: 0.115em;
     background: #99A1BA;
-    border: 1px solid #161822;
+    /*border: 1px solid #161822;*/
     flex: 1;
     margin: 0 0.25em 0 0;
 }
@@ -30,7 +30,21 @@
     content: '';
     height: 0.115em;
     background: #99A1BA;
-    border: 1px solid #161822;
+    /*border: 1px solid #161822;*/
     flex: 1;
     margin: 0 0 0 0.25em;
+}
+
+@media (max-width: 995px) {
+    #contact .split-wrap .split-item {
+        justify-content: space-evenly;
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 641px) {
+    #contact .split-wrap {
+        margin-top: -25px;
+    }
 }

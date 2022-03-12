@@ -9,18 +9,14 @@
         "lint-scss": "stylelint src/scss/*.scss --syntax scss || true",
         "scss": "node-sass --output-style compressed -o public/css src/scss",
         "autoprefixer": "postcss -u autoprefixer -r public/css/*",
-        "lint": "eslint src/js || true",
-        "uglify": "mkdirp public/js -p && uglifyjs src/js/*.js -m -c -o public/js/main.min.js",
         "minify-html": "html-minifier --collapse-whitespace --minify-css --minify-js --remove-comments --file-ext html --input-dir src/ --output-dir public/",
         "sync": "browser-sync start --server --files \"public/css/*.css, public/js/*.js, public/**/*.html, !node_modules/**/*.html\" --serveStatic \"public\" --no-notify",
         "serve:html": "onchange \"src/**/*.html\" -- run-s build:html",
         "serve:css": "onchange \"src/scss\" -- run-s build:css",
-        "serve:js": "onchange \"src/js\" -- run-s build:js",
         "serve:images": "onchange \"src/images\" -- run-s build:images",
         "serve": "run-p sync serve:*",
         "build:html": "run-s minify-html",
         "build:css": "run-s lint-scss scss autoprefixer",
-        "build:js": "run-s lint uglify",
         "build": "run-s build:*"
     },
     "devDependencies": {
